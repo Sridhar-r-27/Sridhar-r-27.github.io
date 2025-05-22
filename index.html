@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.5s ease-out;
+    }
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .theme-toggle {
+      cursor: pointer;
+    }
+    .sun-icon {
+      display: inline-block;
+    }
+    .moon-icon {
+      display: none;
+    }
+    html.dark .sun-icon {
+      display: none;
+    }
+    html.dark .moon-icon {
+      display: inline-block;
+    }
+    /* Ensure theme transitions apply globally */
+    body {
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+  <header class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white sticky top-0 z-10 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+      <h1 class="text-3xl font-bold">Sridhar R</h1>
+      <nav class="flex space-x-4 items-center">
+        <a href="#about" class="hover:text-blue-200 transition">About</a>
+        <a href="#skills" class="hover:text-blue-200 transition">Skills</a>
+        <a href="#contact" class="hover:text-blue-200 transition">Contact</a>
+        <button id="themeToggle" class="theme-toggle p-2 rounded-full hover:bg-blue-700 transition">
+          <svg class="w-6 h-6 sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+          </svg>
+          <svg class="w-6 h-6 moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
+    <section id="about" class="section bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
+      <h2 class="text-3xl font-semibold mb-4 text-blue-600 dark:text-blue-400">About Me</h2>
+      <p class="text-lg">Hi! I'm Sridhar R, a passionate web developer with a knack for creating beautiful, responsive, and user-friendly websites. I specialize in modern JavaScript frameworks, CSS styling, and building seamless user experiences. My goal is to craft digital solutions that are both functional and visually stunning.</p>
+    </section>
+
+    <section id="skills" class="section bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
+      <h2 class="text-3xl font-semibold mb-4 text-blue-600 dark:text-blue-400">Skills</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg text-center transform hover:scale-105 transition">
+          <h3 class="font-medium">HTML & CSS</h3>
+          <p>Expert in crafting semantic HTML and responsive CSS layouts.</p>
+        </div>
+        <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg text-center transform hover:scale-105 transition">
+          <h3 class="font-medium">JavaScript</h3>
+          <p>Proficient in ES6+, DOM manipulation, and asynchronous programming.</p>
+        </div>
+        <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg text-center transform hover:scale-105 transition">
+          <h3 class="font-medium">React</h3>
+          <p>Experienced in building dynamic SPAs with React and Tailwind CSS.</p>
+        </div>
+        <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg text-center transform hover:scale-105 transition">
+          <h3 class="font-medium">Git & GitHub</h3>
+          <p>Skilled in version control and collaborative development workflows.</p>
+        </div>
+        <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg text-center transform hover:scale-105 transition">
+          <h3 class="font-medium">Responsive Design</h3>
+          <p>Expertise in mobile-first design and cross-browser compatibility.</p>
+        </div>
+        <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg text-center transform hover:scale-105 transition">
+          <h3 class="font-medium">UI/UX Principles</h3>
+          <p>Focused on creating intuitive and engaging user interfaces.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
+      <h2 class="text-3xl font-semibold mb-4 text-blue-600 dark:text-blue-400">Contact</h2>
+      <p class="text-lg">Let's connect! Reach out to discuss collaborations or opportunities.</p>
+      <ul class="mt-4 space-y-2">
+        <li>GitHub: <a href="https://github.com/Sridhar-r-27" class="text-blue-500 dark:text-blue-400 hover:underline">github.com/username</a></li>
+        <li>LinkedIn: <a href="https://linkedin.com/in/sridhar-r-116543222" class="text-blue-500 dark:text-blue-400 hover:underline">linkedin.com/in/username</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="bg-gray-900 dark:bg-gray-800 text-white dark:text-gray-100 text-center py-4">
+    <p>© 2025 Your Name. Built with passion and Tailwind CSS.</p>
+  </footer>
+
+  <script>
+    // Theme toggle
+    const htmlElement = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+
+    // Apply saved theme on load
+    if (localStorage.getItem('theme') === 'dark') {
+      htmlElement.classList.remove('light');
+      htmlElement.classList.add('dark');
+    } else {
+      htmlElement.classList.remove('dark');
+      htmlElement.classList.add('light');
+    }
+
+    // Toggle theme on click
+    themeToggle.addEventListener('click', () => {
+      if (htmlElement.classList.contains('dark')) {
+        htmlElement.classList.remove('dark');
+        htmlElement.classList.add('light');
+        localStorage.setItem('theme', 'light');
+      } else {
+        htmlElement.classList.remove('light');
+        htmlElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+
+    // Scroll animation for sections
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
